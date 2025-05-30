@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*font-family: "Bebas Neue" , sans-serif;*/
+@media (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+  }
+
+  .grid-intereses {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*Estilos de la estructura de la pagina*/
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #d1cfcf;
+  background-image: url(imagenes/photo-1651065566483-422c476f2047.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  background-color: #000000;
+  color: rgb(118, 118, 118);
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+main {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+footer {
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #000000;
+  color: rgb(118, 118, 118);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20vh;
+}
+
+/*Estilos de etiquetas especificas*/
+nav a {
+  font-family: 'Times New Roman', Times, serif;
+  color: #8b8b8b;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 5px 10px;
+  flex-grow: 1;
+}
+
+footer p {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* Estilos de clases*/
+.Inicio {
+  max-width: 300px;
+  margin-inline: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  text-align: center;
+  border: 5px solid rgb(116, 116, 116);
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgb(95, 95, 95);
+}
+
+#SobreMi {
+  max-width: 1000px;
+  margin: 60px;
+  margin-inline: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  text-align: justify;
+  border: 5px solid rgb(116, 116, 116);
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgb(95, 95, 95);
+}
+
+#Skills {
+  max-width: 1000px;
+  margin: 60px;
+  padding: 2rem;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  margin-inline: auto;
+  text-align: center;
+  border: 5px solid rgb(116, 116, 116);
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgb(95, 95, 95);
+}
+
+.curriculum {
+  max-width: 1000px;
+  margin: 60px;
+  margin-inline: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  text-align: justify;
+  border: 5px solid rgb(116, 116, 116);
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgb(95, 95, 95);
+}
+
+.descripcionintereses {
+  display: none;
+  font-style: italic;
+}
+
+.item {
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.info-proyecto {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5f5f5;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.imagenfooter {
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.imagenfooter img {
+  display: block;
+  width: 100%;
+  height: 20px;
+  object-fit: cover;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.descripcion {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.nombre {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.intereses {
+  flex: 1 1 40%;
+}
+
+.grid-intereses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.interes {
+  background: #e3e2e2;
+  border-radius: 0.7rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icono {
+  width: 60px;
+  padding: 10px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.Contactos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.progreso {
+  height: 100%;
+  background-color: #6a00ff;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.5s ease-out;
+}
+
+.progreso.visible {
+  transform: scaleX(1);
+}
+
+.barra-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.barra {
+  flex: 1;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.porcentaje {
+  min-width: 40px;
+  text-align: right;
+  color: #000000;
+  font-weight: bold;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.progreso.html {
+  width: 80%;
+}
+
+.progreso.css {
+  width: 75%;
+}
+
+.progreso.py {
+  width: 75%;
+}
+
+.progreso.java {
+  width: 85%;
+}
+
+.progreso.sql {
+  width: 65%;
+}
+
+.progreso.access {
+  width: 85%;
+}
+
+.curriculum-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.columna {
+  flex: 1 1 45%;
+}
+
+
+/* Estilos de etiquetas especificas de clases*/
+.Inicio img {
+  max-width: 150px;
+}
+
+.interes img {
+  font-size: 1.5rem;
+  color: #007bff;
+  width: 30px;
+}
+
+.intereses h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.Inicio h1,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  ;
+}
+
+.Inicio h3 {
+  color: #4b4b4b;
+}
+
+.Contactos svg {
+  width: 30px;
+  height: 32px;
+  fill: rgb(118, 118, 118);
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.backTop svg {
+  width: 30px;
+  height: 30px;
+  padding: 10px 0px 20px 0px;
+  fill: #acacac;
+  transition: transform 0.3s ease-in-out;
+}
+
+.item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.5s ease;
+}
+
+.item figure {
+    overflow: hidden;
+    margin: 0;
+}
+
+.info-proyecto h2 {
+    margin: 0;
+    color: #000000; 
+}
+
+.info-proyecto p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.columna h3 {
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columna li {
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Estilos para animaciones */
+nav a:hover {
+  color: #ffffff;
+}
+
+.Contactos svg:hover {
+  fill: #8a89f3;
+  transform: scale(1.2);
+}
+
+.backTop svg:hover {
+  transform: scale(1.5);
+  fill: #d29fea;
+}
+
+.btn-cv:hover {
+  background-color: #0056b3;
+}
+
+@keyframes cargar-barra {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.Formularios {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin: 60px auto;
+  background-color: rgb(238, 238, 238);
+  border: 5px solid rgb(116, 116, 116);
+  border-radius: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 5px 5px 15px rgb(95, 95, 95);
+}
+
+.Formularios form {
+  width: 100%;
+}
+
+#mensaje {
+  height: 96px;
+  resize: none;
+}
+
+.bloques {
+  display: block;
+  padding: 4px 8px;
+  width: 100%;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+#enviar {
+  background-color: #0e56e7;
+  height: 38px;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#enviar:hover {
+  background-color: #007bff;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}

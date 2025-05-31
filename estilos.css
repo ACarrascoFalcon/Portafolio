@@ -485,7 +485,7 @@ label {
   margin-top: 12px;
 }
 
-#enviar {
+#button {
   background-color: #0e56e7;
   height: 38px;
   color: #ffffff;
@@ -495,7 +495,7 @@ label {
   transition: background-color 0.3s ease;
 }
 
-#enviar:hover {
+#button:hover {
   background-color: #007bff;
 }
 

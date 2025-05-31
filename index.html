@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="JavaScript.js"></script>
     <meta name="author" content="Alejandro Carrasco">
     <meta name="descripcion" content="Portafolio de desarrollo multiplataforma de Alejandro Carrasco">
+
     <title>Alejandro´s Portafolio</title>
 </head>
 </style>
@@ -198,21 +200,48 @@
                 </div>
             </div>
         </section>
-
         <section id="Contactos">
-            <div class="Formularios">
-                <form action="">
+            <div class="Formularios ">
+
+
+                <form action="" id="form">
                     <label for="nombre">Nombre:</label>
-                    <input class="bloques" type="text" id="nombre" placeholder="Escribe tu nombre" required>
+                    <input name="nombre" class="bloques" type="text" id="nombre" placeholder="Escribe tu nombre"
+                        required>
 
                     <label for="email">Email:</label>
-                    <input class="bloques" type="email" id="email" placeholder="ejemplo@ejemplo.com" required>
+                    <input name="email" class="bloques" type="email" id="email" placeholder="ejemplo@ejemplo.com"
+                        required>
 
-                    <label for="mensaje">Escribe tu mensaje:</label>
-                    <textarea class="bloques" id="mensaje" placeholder="Tu mensaje..." required></textarea>
+                    <label for="texto">Escribe tu mensaje:</label>
+                    <textarea name="texto" class="bloques" id="mensaje" placeholder="Tu mensaje..." required></textarea>
 
-                    <input type="submit" id="enviar" class="bloques" value="Enviar">
+                    <input type="submit" id="button" class="bloques" value="Enviar">
                 </form>
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                <script>
+                    emailjs.init('zRGP5xccVYapk8H8e');
+
+                    const btn = document.getElementById('button');
+
+                    document.getElementById('form')
+                        .addEventListener('submit', function (event) {
+                            event.preventDefault();
+                            btn.value = 'Sending...';
+
+                            const serviceID = 'default_service';
+                            const templateID = 'template_19jnrlq';
+
+                            emailjs.sendForm(serviceID, templateID, this)
+                                .then(() => {
+                                    btn.value = 'Send Email';
+                                    alert('Sent!');
+                                }, (err) => {
+                                    btn.value = 'Send Email';
+                                    alert(JSON.stringify(err));
+                                });
+                        });
+                </script>
             </div>
         </section>
     </main>
@@ -230,7 +259,7 @@
             </a>
         </div>
         <div class="Contactos">
-            <a href="">
+            <a href="https://www.linkedin.com/in/alejandrocarrascofalcon/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" fill="currentColor"
                     viewBox="0 0 30 30">
                     <a href=""></a>
@@ -246,24 +275,26 @@
                     <path
                         d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
                     </path>
-                </svg></a>
-
+                </svg>
+            </a>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
                 viewBox="0 0 16 16">
                 <path
                     d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
             </svg>
+            
+                        <a href="https://wa.me/+34640970433" target="_blank" rel="noopener noreferrer">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
                 viewBox="0 0 16 16">
                 <path
                     d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
             </svg>
-
+</a>
         </div>
         <p>&copy; 2025 Alejandro´s Portafolio. Todos los derechos reservados</p>
     </footer>
-    <script src="JavaScript.js"></script>
+
 </body>
 
 </html>

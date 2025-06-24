@@ -30,3 +30,11 @@ function mostrarTexto3(visible) {
 function mostrarTexto4(visible) {
     document.getElementById("desc4").style.display = visible ? "block" : "none";
 }
+
+function mostrarTexto5(visible) {
+    document.getElementById("desc5").style.display = visible ? "block" : "none";
+}
+
+function mostrarTexto6(visible) {
+    document.getElementById("desc6").style.display = visible ? "block" : "none";
+}

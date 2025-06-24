@@ -98,7 +98,6 @@ footer p {
   padding: 2rem;
   background-color: rgb(238, 238, 238);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
   margin-inline: auto;
   text-align: center;
   border: 5px solid rgb(116, 116, 116);
@@ -107,7 +106,7 @@ footer p {
   box-shadow: 5px 5px 15px rgb(95, 95, 95);
 }
 
-.curriculum {
+#MisProyectos {
   max-width: 1000px;
   margin: 60px;
   margin-inline: auto;
@@ -120,32 +119,47 @@ footer p {
   box-shadow: 5px 5px 15px rgb(95, 95, 95);
 }
 
+#MisProyectos a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.curriculum {
+  max-width: 1000px;
+  margin: 60px;
+  margin-inline: auto;
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+  border: 5px solid rgb(116, 116, 116);
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgb(95, 95, 95);
+}
+
 .descripcionintereses {
   display: none;
   font-style: italic;
 }
 
 .item {
-    border-radius: 10px;
-    background-color: #ffffff;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10%;
+
 }
 
 .info-proyecto {
-    padding: 20px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #f5f5f5;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .imagenfooter {
@@ -160,7 +174,12 @@ footer p {
   height: 20px;
   object-fit: cover;
 }
-
+.idioma{
+   margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  max-width: 600px;
+}
 .titulo {
   text-align: center;
   margin-bottom: 2rem;
@@ -180,7 +199,7 @@ footer p {
 .descripcion {
   flex: 1 1 50%;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 2;
   color: #555;
 }
 
@@ -319,20 +338,11 @@ footer p {
 }
 
 .curriculum-contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   gap: 2rem;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', sans-serif;
 }
-
-.columna {
-  flex: 1 1 45%;
-}
-
 
 /* Estilos de etiquetas especificas de clases*/
 .Inicio img {
@@ -377,27 +387,27 @@ h3 {
 }
 
 .item img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 0;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.5s ease;
 }
 
 .item figure {
-    overflow: hidden;
-    margin: 0;
+  overflow: hidden;
+  margin: 0;
 }
 
 .info-proyecto h2 {
-    margin: 0;
-    color: #000000; 
+  margin: 0;
+  color: #000000;
 }
 
 .info-proyecto p {
-    color: #333;
-    font-size: 0.95rem;
-    line-height: 1.6;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .skill span {
@@ -410,16 +420,6 @@ h3 {
 .columna h3 {
   color: #000000;
   margin-bottom: 1rem;
-}
-
-.columna ul {
-  list-style: none;
-  padding: 0;
-}
-
-.columna li {
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
 }
 
 /* Estilos para animaciones */
@@ -500,10 +500,10 @@ label {
 }
 
 .item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
 }
